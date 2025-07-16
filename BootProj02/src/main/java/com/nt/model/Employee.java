@@ -12,7 +12,7 @@ import lombok.Data;
 
 @Component
 @Data
-@PropertySource("classpath:com/nt/commons/myfile.properties")
+@PropertySource("classpath:application.properties")
 public class Employee {
 	@Value("${emp.eno}")
 	private int eno;

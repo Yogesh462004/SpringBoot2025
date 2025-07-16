@@ -12,16 +12,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.nt.model.Employee;
-@Repository("oracle")
-public class Daoimp implements DAO {
-	
+@Repository("mysql")
+public class DaoimpMysql implements DAO {
+	@Autowired
 	private DataSource ds;
 
 	@Override
 	public List<Employee> getemp(int eno) throws Exception{
 		List<Employee> emp=new ArrayList<>(); 
 		try(Connection con=ds.getConnection();
-				PreparedStatement ps=con.prepareStatement("SELECT ENAME,SAL FROM EMP WHERE EMPNO=?")
+				PreparedStatement ps=con.prepareStatement("SELECT EMPNAME,ESAL FROM EMP1 WHERE EMPNO=?")
 				){
 			ps.setInt(1, eno);
 			ResultSet rs=ps.executeQuery();
