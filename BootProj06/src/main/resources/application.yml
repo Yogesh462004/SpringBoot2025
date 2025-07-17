@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: BootProj06
+
+org:
+  name: Mohanp
+  age: 22
+
+  company:
+    size: 100
+    id: 101
+
+  colors:
+    - red
+    - blue
+    - green
+
+  nicknames:
+    - yoge
+    - indu
+    - oo
+
+  pn:
+    - 7975698084
+    - 9019816447
+
+  iddetails:
+    adhar: 7777
+    aname: yoge
