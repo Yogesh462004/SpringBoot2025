@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: BootProj08Profiles2
+  profiles:
+    active: uat
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: system
+    password: 2025
+
+emp:
+  eno: 1
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: uat
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jdbc2025
+    username: root
+    password: 8105
+
+emp:
+  eno: 1
